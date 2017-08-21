@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    {% load staticfiles %}
+
+
+    <link href="https://fonts.googleapis.com/css?family=Acme|Archivo|Arvo|Crete+Round|Francois+One|Josefin+Slab|Kanit|Khula|Lato|Open+Sans|Questrial|Ubuntu" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'js/myP2P_app.js' %}"></script>
+
+
+</head>
+
+<style>
+#heading {
+   color: rgb(27, 99, 148);
+   font-size: 36px;
+   font-family: lato;
+}
+
+#decide {
+   color: rgb(27, 99, 148);
+   font-size: 18px;
+   font-family: lato;
+}
+
+.dropdown {
+  font-size: 10px;
+  font-family: lato;
+}
+
+.form {
+   color: black;
+   font-size: 18px;
+   font-family: lato;
+}
+
+#go {
+color: white;
+background-color:rgb(27, 99, 148);
+font-family: lato
+}
+
+#create {
+color: rgb(27, 99, 148);
+background-color: white;
+font-family: lato
+}
+
+img{
+height:80px;
+}
+
+#investorForm {
+   color: black;
+   font-size: 18px;
+   font-family: lato;
+
+}
+
+#borrowerForm {
+   color: black;
+   font-size: 18px;
+   font-family: lato;
+}
+</style>
+
+<body>
+
+{% block title %}
+{% endblock %}
+{% block content %}
+    <h1 id="heading">Create a myP2P account</h1>
+    <div class ="image">
+        <a href="/" class="header-text"><img class="logo" src="../static/images/logo.png" alt="logo" id="logo">
+        </a><br />
+    </div>
+
+<form action="" method="post" class="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <div id="decide">Please select whether you would like to borrow or invest:</div>
+
+    <select class ="dropdown" name="dropdown" id="dropdown">
+        <option value="Borrow" id="Borrow">Borrow</option>
+        <option value="Invest" id="Invest">Invest</option>
+    </select>
+
+    <input type="button" value="Go" id ="go">
+    <br/> <br/>
+
+    <div class ="borrower">
+        <form id ="borrowerForm">
+         <label>Requested Loan Amount</label>
+            <input type="text" placeholder="in USD" id="loan-size">
+        <br/><br/>
+        <label>Requested Loan Tenor</label>
+            <input type="text" placeholder="in years" id="loan-tenor">
+        <br/><br/>
+        <label>Requested Loan Start Date</label>
+            <input type="text" placeholder="mm/dd/yyyy" id=loan-date">
+        </form>
+    </div>
+
+
+    <div class ="investor">
+        <form id ="investorForm">
+         <label>Requested Investment Amount</label>
+            <input type="text" placeholder="in USD" id="investment-size">
+        <br/><br/>
+        <label>Requested Investment Tenor</label>
+            <input type="text" placeholder="in years" id="investment-tenor">
+        <br/><br/>
+        <label>Requested Investment Start Date</label>
+            <input type="text" placeholder="mm/dd/yyyy" id=investment-date">
+        </form>
+     </div>
+
+    <br/><br/>
+    <input type="submit" value="Create an account" id="create">
+
+</form>
+{% endblock %}
+</body>
+</html>

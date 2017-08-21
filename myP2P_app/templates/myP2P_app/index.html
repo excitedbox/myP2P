@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>myP2P</title>
+    {% load staticfiles %}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Archivo|Arvo|Crete+Round|Francois+One|Josefin+Slab|Kanit|Khula|Lato|Open+Sans|Questrial|Ubuntu" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="{% static 'js/myP2P_app.js' %}"></script>
+	<link href="{% static 'css/myP2P_app.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<div class = "container">
+
+   <div class ="row wrapper">
+    <div class ="row row-one">
+        <a href="/" class="header-text"><img class="logo" src="../static/images/logo.png" alt="logo" id="logo">
+        </a><br />
+        <div class = "socialMedia">
+                <ul>
+                    <li class="social"><i class="fa fa-facebook"></i></li>
+                    <li class="social"><i class="fa fa-twitter"></i></li>
+                    <li class="social"><i class="fa fa-instagram"></i></li>
+                </ul>
+            </div>
+            <div class = "menu-options">
+
+                  <button class="menu"  id="borrowing"><i class="fa fa-credit-card icon3" aria-hidden="true" ></i>
+                   <a href="/borrowing/" class="header-text">Borrowing</a><br /></button>
+
+                  <button class="menu" id="lending"><i class="fa fa-money icon3" aria-hidden="true"></i>
+                    <a href="/investing/" class="header-text">Investing</a><br /></button>
+
+                  <button class="menu" id="register"><i class="fa fa-plus icon3" aria-hidden="true"></i>
+                        <a href="/register/" class="header-text">Register</a><br />
+                  </button>
+
+                    <button class="menu" id="sign-in"><i class="fa fa-sign-in icon3" aria-hidden="true" ></i>
+                        <a href="/login/" class="header-text">Login</a><br />
+                  </button>
+
+                    <button class="menu" id="sign-out"><i class="fa fa-sign-out icon3" aria-hidden="true" ></i>
+                        <a href="/logout/" class="header-text">Logout</a><br />
+                  </button>
+
+                    <button class="menu" id="faq"><i class="fa fa-question icon3" aria-hidden="true" ></i>
+                        <a href="/faq/" class="header-text">FAQ</a><br />
+                  </button>
+
+            </div>
+     </div>
+   </div>
+
+<div class="row row-two">
+            <div class="col-md-12" id="overview">
+                <h1 id ="main-heading"> Why <span>myP2P?</span> </h1>
+                <h3 id ="tagline"> <span>myP2P</span> connects borrowers with investors through a proprietary matching algorithm. Loans offered to consumers are made by other consumers, who are drawn to <span>myP2P</span> because of its <b id="bold">higher returns</b> compared to a typical bank loan.</h3>
+            </div>
+</div>
+
+<div class = "row row-three-main">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class ="credit-cards">
+                    <div class="image-holder">
+                        <i class="fa fa-credit-card" aria-hidden="true" id ="icon1"></i>
+                    </div>
+                        <div class ="cards-text">
+                            <h1 id ="description-title">Pay Off Credit Card Debt</h1>
+                                <p id ="description">
+                                Pay off your credit card debt with a loan and save money with an affordable, fixed interest rate.
+                                </p>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="consolidate-debt">
+                    <div class="image-holder">
+                        <i class="fa fa-home" aria-hidden="true" id ="icon1"></i>
+                    </div>
+                        <div class ="home-text">
+                            <h1 id ="description-title">Make Home Improvements</h1>
+                                <p id ="description">
+                                As opposed to traditional bank loans, <span>myP2P</span> home loans are based solely on your credit worthiness, and <b>NOT</b> the value of your house. This will give you the flexiblity you deserve.
+                                </p>
+                        </div>
+                </div>
+            </div>
+</div>
+
+
+<div class="row row-four">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class ="credit-cards">
+                    <div class="image-holder">
+                        <i class="fa fa-check-square-o" aria-hidden="true" id="icon1"></i>
+                    </div>
+                        <div class ="cards-text">
+                            <h1 id ="description-title">Cover Major Expenses</h1>
+                                <p id ="description">
+                                Whether it's a new car, TV or furniture, <span>myP2P</span> provides great financing options.
+                                </p>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="consolidate-debt">
+                    <div class="image-holder">
+                        <i class="fa fa-thumbs-o-up" aria-hidden="true" id="icon1"></i>
+                    </div>
+                        <div class ="home-text">
+                            <h1 id ="description-title">Debt Consolidation</h1>
+                                <p id ="description">
+                               Pay off multiple bills in a single and simple payment.
+                                </p>
+                        </div>
+                </div>
+            </div>
+</div>
+
+<div class="row row-five">
+            <div class="col-md-12">
+                <div class="borrowers">
+                    <div class = "borrowers-overview">
+                       <div class ="borrower-register">
+                            <button class ="register">
+                            <a href="/register/">Click here to Borrow Now!</a>
+                            </button>
+                        </div>
+
+                        <h1 class="text-header">How to Borrow</h1>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class = "steps-details">
+                                    <i class="fa fa-calendar-o" aria-hidden="true" id="icon2"></i>
+                                       <h3 class = "how-it-works">
+                                       Fill out a short form with your personal details as well as the desired amount you would like to borrow.
+                                       </h3>
+                                </div>
+                             </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class = "steps-details">
+                                    <i class="fa fa-calendar" aria-hidden="true" id="icon2"></i>
+                                       <h3 class = "how-it-works">
+                                       Select the monthly payment and interest rate option that fits you best.
+                                       </h3>
+                                </div>
+                             </div>
+
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class = "steps-details">
+                                    <i class="fa fa-cloud-upload" aria-hidden="true" id="icon2"></i>
+                                       <h3 class = "how-it-works">
+                                       Sit back, relax and let us do the work in depositing the money into your account.
+                                       </h3>
+                                </div>
+                             </div>
+                    </div>
+                </div>
+            </div>
+</div>
+
+<div class="row row-six">
+            <div class="col-md-12">
+                <div class="lenders">
+                    <div class = "lenders-overview">
+                       <div class ="lender-register">
+                           <button class ="register">
+                                <a href="/register/">Click here to Lend Now!</a>
+                            </button>
+                        </div>
+
+                        <h1 class = "text-header">How to Lend</h1>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class = "steps-details">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true" id="icon2"></i>
+                                       <h3 class = "how-it-works">
+                                       The first step to becoming an investor is opening an account. Browse our options for the type of account that best suits you.
+                                       </h3>
+                                </div>
+                             </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class = "steps-details">
+                                    <i class="fa fa-arrow-circle-o-up" aria-hidden="true" id="icon2"></i>
+                                       <h3 class = "how-it-works">
+                                       Pick an investment strategy. This can be a preselected strategy based on what we offer, or you may choose to create your own.
+                                       </h3>
+                                </div>
+                             </div>
+
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class = "steps-details">
+                                    <i class="fa fa-plus-square" aria-hidden="true" id="icon2"></i>
+                                       <h3 class = "how-it-works">
+                                       Connect your bank account to your <span>myP2P</span> account. Your earnings will be automatically deposited into your account.
+                                       </h3>
+                                </div>
+                             </div>
+                    </div>
+                </div>
+            </div>
+</div>
+
+
+<div class="row row-seven">
+
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <img class="featured1" src="https://upload.wikimedia.org/wikipedia/commons/7/77/The_New_York_Times_logo.png" alt="NY Times">
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12" >
+        <img class="featured2" src="https://arpr.com/app/uploads/2016/10/techcrunch-logo.png" alt="TechCrunch">
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <img class="featured3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/The_Wall_Street_Journal_Logo.svg/2000px-The_Wall_Street_Journal_Logo.svg.png" alt="WSJ">
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <img class="featured4" src="http://blog.ourcrowd.com/wp-content/uploads/2017/01/ENGlogo32_3.png" alt="Globes">
+    </div>
+
+</div>
+
+
+<div class="row footer">
+    <div class="col-md-12">
+
+    <section id="contact" style="">
+            <div class="container">
+                <div class="row">
+                    <div class="about_our_company" style="margin-bottom: 20px;">
+                        <h1 id ="contact" style="color:rgba(0, 0, 0, 0.68);">Contact Us</h1>
+                        <div class="titleline-icon"></div>
+                        <p id="form-content" style="color:rgba(0, 0, 0, 0.68);">We'd love to hear from you! Please complete the form below with any questions or comments </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <form name="sentMessage" id="contactForm" novalidate="">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Your Name *" id="name" required="" data-validation-required-message="Please enter your name.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Your Email *" id="email" required="" data-validation-required-message="Please enter your email address.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required="" data-validation-required-message="Please enter your phone number.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <textarea class="form-control" placeholder="Your Message *" id="message" required="" data-validation-required-message="Please enter a message."></textarea>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-12 text-center">
+                                    <div id="success"></div>
+                                    <button type="submit" class="btn btn-xl get">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <p id="contact-text" style="color:rgba(0, 0, 0, 0.68);">
+                            <strong><i class="fa fa-map-marker"></i> Address</strong><br>
+                            12 Haavoda Street, Tel Aviv, Israel
+                        </p>
+                        <p id="contact-text" style="color:rgba(0, 0, 0, 0.68);"><strong><i class="fa fa-phone"></i> Phone Number</strong><br>
+                            (+972)&nbsp52-873-8792</p>
+                        <p id="contact-text" style="color:rgba(0, 0, 0, 0.68);">
+                            <strong><i class="fa fa-envelope"></i> Email Address</strong><br>
+                            support@myP2P.com</p>
+                        <p></p>
+                         <img class="logo" src="./static/images/logo.png" alt="logo" id="logo2">
+                    </div>
+                </div>
+            </div>
+        </section>
+            </div>
+        </div>
+
+</div>
+
+
+<!--{{ user }}-->
+<!--{% if user.is_anonymous %}-->
+    <!--<a href="{% url 'login' %}">login</a>-->
+    <!--<a href="/myP2P_app/register/">register</a><br />-->
+<!--{% else %}-->
+    <!--<a href="{% url 'logout' %}">logout</a>-->
+<!--{% endif %}-->
+
+<!--<br/>-->
+
+<!--{% if user.is_authenticated %}-->
+    <!--{% if latest_question_list %}-->
+        <!--<ul>-->
+            <!--{% for question in latest_question_list %}-->
+                <!--<li><a href="{% url 'myP2P_app:detail' question.id %}">{{ question.question_text }}</a></li>-->
+            <!--{% endfor %}-->
+        <!--</ul>-->
+    <!--{% else %}-->
+        <!--<p>No current details are available.</p>-->
+    <!--{% endif %}-->
+<!--{% endif %}-->
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

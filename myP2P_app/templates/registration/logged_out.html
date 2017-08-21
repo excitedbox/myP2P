@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logged Out</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Acme|Archivo|Arvo|Crete+Round|Francois+One|Josefin+Slab|Kanit|Khula|Lato|Open+Sans|Questrial|Ubuntu" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<style>
+img{
+height:150px;
+}
+.text{
+   color: black;
+   font-size: 30px;
+   font-family: lato;
+}
+</style>
+
+<body>
+
+{% block content %}
+<div class ="image">
+        <a href="/" class="header-text"><img class="logo" src="../static/images/logo.png" alt="logo" id="logo">
+        </a><br />
+</div>
+
+<div class ="text"> Logout successful, see you next time! </div>
+{% endblock %}
+
+</body>
+</html>
