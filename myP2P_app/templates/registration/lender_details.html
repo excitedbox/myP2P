@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lender Details</title>
+</head>
+<body>
+
+    <div class ="investor">
+        <form action="{% url 'investing' %}" method="post" class="form">
+            {% csrf_token %}
+            {{ lender_form.as_ul }}
+            <input type="hidden" name="type" value="lender">
+            <input type="submit" value="Create an account" id="submit-account">
+        </form>
+     </div>
+
+
+</body>
+</html>

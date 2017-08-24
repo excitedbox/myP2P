@@ -1,0 +1,9 @@
+<div class ="borrower">
+        <form action="{% url 'borrowing' %}" method="post" class="form">
+            {% csrf_token %}
+            {{ borrower_form.as_ul }}
+            <input type="hidden" name="type" value="borrower">
+            <input type="submit" value="Create an account" id="submit-account">
+
+        </form>
+</div>

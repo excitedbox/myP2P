@@ -40,7 +40,7 @@
                     <a href="/investing/" class="header-text">Investing</a><br /></button>
 
                   <button class="menu" id="register"><i class="fa fa-plus icon3" aria-hidden="true"></i>
-                        <a href="/register/" class="header-text">Register</a><br />
+                        <a href="/register_user/" class="header-text">Register</a><br />
                   </button>
 
                     <button class="menu" id="sign-in"><i class="fa fa-sign-in icon3" aria-hidden="true" ></i>
@@ -133,7 +133,7 @@
                     <div class = "borrowers-overview">
                        <div class ="borrower-register">
                             <button class ="register">
-                            <a href="/register/">Click here to Borrow Now!</a>
+                            <a href="/register_user/">Click here to Borrow Now!</a>
                             </button>
                         </div>
 
@@ -174,7 +174,7 @@
                     <div class = "lenders-overview">
                        <div class ="lender-register">
                            <button class ="register">
-                                <a href="/register/">Click here to Lend Now!</a>
+                                <a href="/register_user/">Click here to Lend Now!</a>
                             </button>
                         </div>
 
@@ -267,11 +267,20 @@
                                 <div class="clearfix"></div>
                                 <div class="col-lg-12 text-center">
                                     <div id="success"></div>
-                                    <button type="submit" class="btn btn-xl get">Send Message</button>
+                                    <button type="submit" class="btn btn-xl get" id="submit-contact">Send Message</button>
+                                       <div class ="login">
+                                <div class ="login-text">
+                                    <h4 id="login-text">Already have an account? Click <a href="/login/">here</a> to login</h4>
+                                </div>
+                            </div>
                                 </div>
                             </div>
                         </form>
                     </div>
+
+
+
+
                     <div class="col-md-4">
                         <p id="contact-text" style="color:rgba(0, 0, 0, 0.68);">
                             <strong><i class="fa fa-map-marker"></i> Address</strong><br>

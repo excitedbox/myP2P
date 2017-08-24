@@ -38,7 +38,7 @@
                     <a href="/investing/" class="header-text">Investing</a><br /></button>
 
                   <button class="menu" id="register"><i class="fa fa-plus icon3" aria-hidden="true"></i>
-                        <a href="/register/" class="header-text">Register</a><br />
+                        <a href="/register_user/" class="header-text">Register</a><br />
                   </button>
 
                     <button class="menu" id="sign-in"><i class="fa fa-sign-in icon3" aria-hidden="true" ></i>
@@ -62,18 +62,18 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class ="profile">
                         <div class ="profile-text">
-                            <h1 id ="profile-title">My Investor Profile</h1>
+                            <h1 id ="profile-title">{{result.lender_user_id}}'s  Investor Profile</h1>
                                 <p id ="profile-description">
                                 Please see below a current snapshot of your investment.
                                 </p>
                         </div>
 
                         <div class ="numbers">
-                            <div id="loan-outstanding" class ="stats">Loan Outstanding: </div>
-                            <div id="loan-term" class="stats">Term: </div>
-                            <div id="interest-rate" class="stats">Interest Rate: </div>
-                            <div id="register-date" class="stats">Register Date: </div>
-                            <div id="transaction-date" class="stats">Transaction Date: </div>
+                            <div id="loan-outstanding" class ="stats">Loan Outstanding: ${{result.lender_outstanding_balance}} </div>
+                            <div id="loan-term" class="stats">Term: {{result.lender_term_balance}} years </div>
+                            <div id="interest-rate" class="stats">Interest Rate: {{result.lender_interest_rate}}% </div>
+                            <!--<div id="register-date" class="stats">Register Date: </div>-->
+                            <!--<div id="transaction-key" class="stats">Transaction ID: {{result.lender_user_id}} </div>-->
                         </div>
                 </div>
             </div>

@@ -21,6 +21,11 @@ height:80px;
    font-family: lato;
 }
 
+#wrong {
+   color: red;
+   font-size: 18px;
+   font-family: lato;
+}
 #login {
 color: white;
 background-color:rgb(27, 99, 148);
@@ -31,8 +36,14 @@ font-family: lato
    color: rgb(27, 99, 148);
    font-size: 24px;
    font-family: lato;
-
 }
+
+#login-text {
+   color: rgb(27, 99, 148);
+   font-size: 12px;
+   font-family: lato;
+}
+
 
 
 </style>
@@ -44,15 +55,14 @@ font-family: lato
  </div>
 
   <div class ="heading">
-     Please enter your credentials below:
+     Please enter your credentials below to continue:
       <br/>
  </div>
 
 
-
 {% block content %}
 {% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
+<p id="wrong">Your username and password didn't match. Please try again.</p>
 {% endif %}
 
 <form method="post" id="post">
@@ -72,6 +82,10 @@ font-family: lato
 <input type="hidden" name="next" value="{{ next }}" />
 <a href="/login/"></a><br />
 </form>
+
+ <div class ="login-text">
+    <h4 id="login-text">Don't have an account? Click <a href="/register_user/">here</a> to register</h4>
+ </div>
 
 {% endblock %}
 

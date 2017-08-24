@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Details</title>
+
+    {% load staticfiles %}
+
+    <link href="https://fonts.googleapis.com/css?family=Acme|Archivo|Arvo|Crete+Round|Francois+One|Josefin+Slab|Kanit|Khula|Lato|Open+Sans|Questrial|Ubuntu" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'js/myP2P_app.js' %}"></script>
+
+</head>
+
+<body>
+    <h1 id="heading">Profile Details</h1>
+    <h4 id="heading-two">Thanks for setting up an account, please fill out the below form to complete your profile</h4>
+
+    <div id="decide">Please select whether you would like to borrow or invest:</div>
+
+    <select class ="dropdown" name="dropdown" id="dropdown">
+        <option value="Borrow" id="Borrow">Borrow</option>
+        <option value="Invest" id="Invest">Invest</option>
+    </select>
+
+    <input type="button" value="Go" id ="go">
+    <br/><br/>
+
+    <div class ="borrower">
+             <label>Requested Loan Amount:</label>
+                <input type="text" placeholder="in USD" id="loan-size">
+            <br/><br/>
+            <label>Requested Loan Tenor:</label>
+                <input type="text" placeholder="in years" id="loan-tenor">
+            <br/><br/>
+            <label>Requested Interest Rate:</label>
+                <input type="text" placeholder="%" id="loan-rate">
+            <br/><br/>
+            <label>Requested Loan Start Date:</label>
+                <input type="text" placeholder="mm/dd/yyyy" id=loan-date">
+    </div>
+
+    <div class ="investor">
+             <label>Requested Investment Amount:</label>
+                <input type="text" placeholder="in USD" id="investment-size">
+            <br/><br/>
+            <label>Requested Investment Tenor:</label>
+                <input type="text" placeholder="in years" id="investment-tenor">
+            <br/><br/>
+            <label>Requested Interest Rate:</label>
+                <input type="text" placeholder="in years" id="investment-rate">
+            <br/><br/>
+            <label>Requested Investment Start Date:</label>
+                <input type="text" placeholder="mm/dd/yyyy" id=investment-date">
+     </div>
+
+{% endblock %}
+
+
+
+</body>
+</html>
