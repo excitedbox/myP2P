@@ -5,4 +5,4 @@ from django.apps import AppConfig
 
 
 class myP2PAppConfig(AppConfig):
-    name = 'myP2P_app'
+    name = 'test12345r'
