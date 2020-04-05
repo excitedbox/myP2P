@@ -30,7 +30,7 @@ DEBUG = True
 
 INSTALLED_APPS = [
     # 'myP2P_app.apps.myP2PAppConfig',
-    "myP2P_app",
+    "test12345r",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
